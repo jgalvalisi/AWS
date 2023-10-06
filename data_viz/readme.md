@@ -1,4 +1,4 @@
-## Data visualization with Amazon S3 and Amazon QuickSight
+## Unicorn Companies detail with Amazon S3 and Amazon QuickSight
 
 ### Unicorn Companies
 
@@ -44,7 +44,3 @@ Source: https://www.kaggle.com/datasets/deepcontractor/unicorn-companies-dataset
   - North America (United States and Canada) has almost 50% of all the unicorns in the world.
     
   - Within South America, Brazil has the most unicorns, with 21 (76%).
-
-
-
-
