@@ -38,8 +38,11 @@ Source: https://www.kaggle.com/datasets/deepcontractor/unicorn-companies-dataset
 - Analysis
   
   - The three best-valued unicorns in the world have a valuation above $100B and come from China (Bytedance and SHEN) and the United States (SpaceX).
+    
   - San Francisco has the most unicorns in the world, with 152.
+    
   - North America (United States and Canada) has almost 50% of all the unicorns in the world.
+    
   - Within South America, Brazil has the most unicorns, with 21 (76%).
 
 
