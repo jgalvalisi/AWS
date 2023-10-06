@@ -24,7 +24,7 @@ Source: https://www.kaggle.com/datasets/deepcontractor/unicorn-companies-dataset
 <img width="1501" alt="Screenshot 2023-10-06 at 13 59 47" src="https://github.com/jgalvalisi/AWS/assets/97465207/04ce59d7-ded3-4542-acf0-784592fed03f">
 
 - Go to Amazon QuickSight and connect it to your bucket with the manifest.json file copying the S3 URl
-- 
+  
 - Create data visualizations in Amazon QuickSight
 
 <img width="723" alt="Screenshot 2023-10-06 at 14 21 56" src="https://github.com/jgalvalisi/AWS/assets/97465207/7a59a230-208d-43dc-8b27-cdb04e7f59e0">
@@ -36,7 +36,10 @@ Source: https://www.kaggle.com/datasets/deepcontractor/unicorn-companies-dataset
 <img width="470" alt="Screenshot 2023-10-06 at 13 35 45" src="https://github.com/jgalvalisi/AWS/assets/97465207/e62e7414-5e55-4ac7-84a9-0b786f467154">
 
 - Analysis
-- 
+  
+  - The three best-valued unicorns in the world have a valuation above $100B and come from China (Bytedance and SHEN) and the United States (SpaceX)
+  - New York is the city with the most unicorns in the world with 152
+  - Within South America, Brazil is the country with the most unicorns with 21 (76%)
 
 
 
