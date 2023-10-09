@@ -1,6 +1,6 @@
 ## Website Portfolio
 
-Utilizing AWS, you have the capability to host static web pages, such as a website portfolio. In this instance, I will host my personal web portfolio using Amazon S3 Buckets, Amazon Route 53, and CloudFront to achieve this objective.
+Utilizing AWS, you have the capability to host static web pages, such as a website portfolio. In this instance, I will host my personal web portfolio using Amazon S3 Buckets, Amazon Route 53, and CloudFront to achieve this objective (www.jgalvalisi.com)
 
 ### Why will we use these services?
 
@@ -12,8 +12,8 @@ Amazon S3 Buckets.
 ### Amazon S3 Buckets
  
 - Create two buckets: one to host all website-related files and another to redirect requests to the proper domain (the one without "www").
-- Bucket 1: Name it after your domain without 'www', enable 'Static website hosting' within jgalvalisi.io (actually "www"), and select 'https' as the primary protocol.
-- Bucket 2: Name it after your domain with 'www', enable 'Redirect requests for an object' to www.jgalvalisi.io, and select 'https' as the primary protocol.
+- Bucket 1: Name it after your domain without 'www', enable 'Static website hosting' within jgalvalisi.com (actually "www"), and select 'https' as the primary protocol.
+- Bucket 2: Name it after your domain with 'www', enable 'Redirect requests for an object' to www.jgalvalisi.com, and select 'https' as the primary protocol.
 Amazon Route 53
 
 ### Amazon Route 53
