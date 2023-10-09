@@ -10,7 +10,7 @@ With AWS, you can host static web pages such as, for example, a website portfoli
 
 ### Amazon S3 Buckets
  
-- Create two buckets: one will host all the files related to the website, and the other to redirect the request to the proper domain.
+- Create two buckets: one will host all the files related to the website, and the other to redirect the request to the proper domain (the one with wwww).
 - Bucket 1: Name it as your domain website without wwww, enable 'Static website hosting' within the jgalvalisi.io (en realidad wwww), and select 'https' as the main protocol.
 - Bucket 2: Name it as your domain website with wwww, enable 'Redirect requests for an object' to www.jgalvalisi.github.io and select 'https' as the main protocol.
 
