@@ -1,4 +1,13 @@
-## Website Portfolio
+## Building a Serverless Application
+
+In this project, we went through how to build a dynamic, serverless web application. In detail, we will host static web resources with Amazon S3, how to use Amazon Cognito to manage users and authentication, and how to build a RESTful API for backend processing using Amazon API Gateway, AWS Lambda and Amazon DynamoDB.
+
+
+
+
+
+
+
 
 Utilizing AWS, you have the capability to host static web pages, such as a website portfolio. In this instance, I will host my personal web portfolio using Amazon S3 Buckets, Amazon Route 53, and CloudFront to achieve this objective (www.jgalvalisi.com)
 
