@@ -2,7 +2,7 @@
 
 ## Description:
 
-In this project, we will build a dynamic serverless web application using [AWS Lambda] (https://aws.amazon.com/es/lambda/), [Amazon DynamoDB] (https://aws.amazon.com/es/dynamodb/), [Amazon S3] (https://aws.amazon.com/es/s3/), and [Amazon CloudFront] (https://aws.amazon.com/es/cloudfront/). The application will allow users to create, read, update, and delete (CRUD) items from a DynamoDB table.
+In this project, we will build a dynamic serverless web application using [AWS Lambda (https://aws.amazon.com/es/lambda/)], [Amazon DynamoDB] (https://aws.amazon.com/es/dynamodb/), [Amazon S3] (https://aws.amazon.com/es/s3/), and [Amazon CloudFront] (https://aws.amazon.com/es/cloudfront/). The application will allow users to create, read, update, and delete (CRUD) items from a DynamoDB table.
 
 ## Step by Step:
 
