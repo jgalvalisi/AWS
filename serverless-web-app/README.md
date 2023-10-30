@@ -9,7 +9,7 @@ The application will allow users to create, read, update, and delete (CRUD) item
 ## Step by Step:
 
 
-### ❇️ 1° Phase - Create an S3 bucket to host the website
+### ❇️  1° Phase - Create an S3 bucket to host the website
 
 - Using Amazon S3, we will host and compile all the files related to the website, such as HTML, CSS, or JavaScript formats.
 - Use the bucket name you like (I'll use serverless-web-application-on-aws-project/doingwithservicecloudproviders.free.nf) and choose the region you need (in my case eu-central-1 Frankfurt).
@@ -22,7 +22,7 @@ The application will allow users to create, read, update, and delete (CRUD) item
 <img width="1516" alt="Screenshot 2023-10-26 at 19 11 22" src="https://github.com/jgalvalisi/AWS/assets/97465207/5639ccdb-c3a7-4ff2-ad59-1d10bb42624c">
 
 
-### 2° Phase - Create the CloudFront distribution
+### ❇️  2° Phase - Create the CloudFront distribution
 
 - To get low-latency of the website, we are going to settle CloudFront connected to our bucket.
 - Select our S3 bucket as the origin domain.
@@ -35,7 +35,7 @@ The application will allow users to create, read, update, and delete (CRUD) item
 - The last part of this is to select our index.html as the Default root object within the settings of the CloudFront distribution that we've created.
 
 
-### 3° Phase - Route53 in combination with CloudFront
+### ❇️  3° Phase - Route53 in combination with CloudFront
 
 - Register a hosted zone using Route53. In my case, I used my test domain doingwithservicecloudproviders.free.nf, a personal domain that I got using InfinityFree (a hosting provider that offers free subdomains and free hosting services).
 - Edit the CloudFront by changing the 'Alternate domain names' section within 'Settings.'
@@ -43,7 +43,7 @@ The application will allow users to create, read, update, and delete (CRUD) item
 - Route your AWS URL link to your domain.
 
 
-### 4° Phase - Create an AWS DynamoDB table
+### ❇️  4° Phase - Create an AWS DynamoDB table
 
 - Create a dynamic DynamoDB table to store the items.
 - Add a table name and select 'id' as a partition key.
@@ -56,7 +56,7 @@ The application will allow users to create, read, update, and delete (CRUD) item
 <img width="1290" alt="Screenshot 2023-10-30 at 10 04 06" src="https://github.com/jgalvalisi/AWS/assets/97465207/f7295cf4-7b85-436b-bae6-b06e785c1874">
 
 
-### 5° Phase - Create an IAM role for the new Lambda function
+### ❇️   5° Phase - Create an IAM role for the new Lambda function
 
 - We are going to use this IAM role to give permissions to allow access to our new DynamoDB table.
 - Go to the IAM section and create a new AWS role to use Lambda functions.
@@ -64,7 +64,7 @@ The application will allow users to create, read, update, and delete (CRUD) item
 - Finally, add a name and create the role! You should have it now, and you can see it within your IAM Roles list.
 
 
-### 6° Phase - Create a Lambda function
+### ❇️   6° Phase - Create a Lambda function
 
 - Go to AWS Lambda and create an AWS Lambda function that will persist data to an Amazon DynamoDB table.
 - In my case, I'll use the same name that we have been using (serverless-web-application-on-aws-project) and Pyhton 3.8, but you can use other languages you feel comfortable with.
@@ -109,13 +109,13 @@ The application will allow users to create, read, update, and delete (CRUD) item
 <img width="973" alt="Screenshot 2023-10-30 at 16 06 46" src="https://github.com/jgalvalisi/AWS/assets/97465207/c0c3b43f-c7d6-4490-88b6-683595dc90c7">
 
 
-### 8° Phase - Delete the services (in case you need it)
+### ❇️  7° Phase - Delete the services (in case you need it)
 
 - In my case, I don't want to be charged for these services that I've created, so I'll proceed to delete everything with the aim of avoiding future charges.
 - If you are in the same situation as me, just delete your S3 Bucket, DynamoDB table, IAM role, CloudFront, DNS you indicated, and any other related resource!
 
 
-## Summary:
+## ❇️  Summary:
 
 With this project, we created a serverless web application hosted on AWS, using AWS Lambda, DynamoDB, S3, and CloudFront, among other services.
 
