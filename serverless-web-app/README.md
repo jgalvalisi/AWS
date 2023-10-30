@@ -2,20 +2,20 @@
 
 ## Description:
 
-In this project, we will build a dynamic serverless web application using [AWS Lambda](https://aws.amazon.com/es/lambda/), [Amazon DynamoDB](https://aws.amazon.com/es/dynamodb/), [Amazon S3](https://aws.amazon.com/es/s3/), and [Amazon CloudFront](https://aws.amazon.com/es/cloudfront/). The application will allow users to create, read, update, and delete (CRUD) items from a DynamoDB table.
+In this project, we will build a dynamic serverless web application using [AWS Lambda](https://aws.amazon.com/es/lambda/), [Amazon DynamoDB](https://aws.amazon.com/es/dynamodb/), [Amazon S3](https://aws.amazon.com/es/s3/), and [Amazon CloudFront](https://aws.amazon.com/es/cloudfront/). The application will allow users to create, read, update, and delete (CRUD) items from a DynamoDB table. In detail, we are going to count the number of viewers our new website has and check if it works or not using a DynamoDB table.
 
 ## Step by Step:
 
 ### 1° Phase - Create an S3 bucket to host the website
 
 - Using Amazon S3, we will host and compile all the files related to the web site such as HTML, CSS or JavaScript formats.
-- Use the bucket name you like (I'll use serverless-web-application-on-aws-project) and choose the region you need (in my case eu-central-1 Frankfurt).
+- Use the bucket name you like (I'll use serverless-web-application-on-aws-project/doingwithservicecloudproviders.free.nf) and choose the region you need (in my case eu-central-1 Frankfurt).
 - You can leave the rest as default settings.
 - Upload the static files within the bucket.
 
 ### 2° Phase - Create the CloudFront distribution
 
-- To get lot-latency of the website, we are going to settle CloudFront related to our bucket.
+- To get low-latency of the website, we are going to settle CloudFront connected to our bucket.
 - Select our S3 bucket as the origin domain.
 - Select the option 'Origin access control settings (recommended)' since we did not make our S3 bucket as public.
 - Set the Origin access control creating a new one.
@@ -25,9 +25,29 @@ In this project, we will build a dynamic serverless web application using [AWS L
 - Now go to your S3 bucket and select 'Permissions'. We are going to add the policy within the bucket.
 - The last part of this is select our index.html as the Default root object within the settings of the CloudFront distribution that we've created.
 
-### 3° Phase - 
 
-- 
+### 3° Phase - Route53
+
+- Register a hosted zone using Route53. In my case, I used my test domain doingwithservicecloudproviders.free.nf, a personal domain that I got using InfinityFree (a hosting provider offers free subdomains and free hosting services).
+- Edit the CloudFront changing 'Alternate domain names' section within Settings.
+- Add a custom domain name using your personal domain (without using 'wwww' please!).
+- Route your AWS URL link to your personal domain.
+
+
+### 4° Phase - Create an AWS DynamoDB table
+
+- Create a DynamoDB table to store the items.
+- Add a table name and then select as 'id' as a partition key.
+
+
+### 5° Phase - Create an IAM role for the new Lamda function
+
+- We are going to use this IAM role to give permissions to allow access to our DynamoDB table.
+-  
+
+
+
+
 
 
 * Create a DynamoDB table to store the items.
@@ -36,10 +56,6 @@ In this project, we will build a dynamic serverless web application using [AWS L
 * Create a CloudFront distribution to serve the S3-hosted static files with low latency.
 
 
-
-### 4° Phase - 
-
-### 5° Phase - 
 
 ### 6° Phase - 
 
