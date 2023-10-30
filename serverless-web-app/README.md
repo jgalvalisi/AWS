@@ -9,7 +9,7 @@ The application will allow users to create, read, update, and delete (CRUD) item
 ## Step by Step:
 
 
-### 1° Phase - Create an S3 bucket to host the website
+### ❇️ 1° Phase - Create an S3 bucket to host the website
 
 - Using Amazon S3, we will host and compile all the files related to the website, such as HTML, CSS, or JavaScript formats.
 - Use the bucket name you like (I'll use serverless-web-application-on-aws-project/doingwithservicecloudproviders.free.nf) and choose the region you need (in my case eu-central-1 Frankfurt).
