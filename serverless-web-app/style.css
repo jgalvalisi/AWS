@@ -1,5 +1,5 @@
 header {
-	background-color: #333;
+	background-color: #0d0d2f; /* Darker Blue */
 	color: #fff;
 	padding: 10px;
 }
@@ -26,8 +26,7 @@ input[type="text"] {
 }
 
 button {
-	padding: 5px 10px;
-	background-color: #333;
+	background-color: #0d0d38; /* Darker Blue */
 	color: #fff;
 	border: none;
 	border-radius: 5px;
