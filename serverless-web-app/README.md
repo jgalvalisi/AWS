@@ -4,7 +4,7 @@
 
 In this project, we will build a dynamic serverless web application integrating [AWS Lambda](https://aws.amazon.com/es/lambda/), [Amazon DynamoDB](https://aws.amazon.com/es/dynamodb/), [Amazon S3](https://aws.amazon.com/es/s3/), [Amazon CloudFront](https://aws.amazon.com/es/cloudfront/), and [Amazon Route53](https://aws.amazon.com/es/route53/) services. 
 
-The application will allow users to create, read, update, and delete (CRUD) items from a DynamoDB table. What we want to accomplish at the end is to count the number of viewers our new website has and check if it works or not using a DynamoDB table.
+What we want to accomplish at the end is to count the number of viewers our new website has and check if it works or not using a DynamoDB table.
 
 ## Step by Step:
 
