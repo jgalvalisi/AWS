@@ -86,8 +86,7 @@ In this project, we will build a dynamic serverless web application integrating 
         'views': views
     })
     
-    return views
-`
+    return views`
     
 
 ### 7° Phase - Set up the Lambda function
