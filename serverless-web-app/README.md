@@ -2,7 +2,9 @@
 
 ## Description:
 
-In this project, we will build a dynamic serverless web application integrating [AWS Lambda](https://aws.amazon.com/es/lambda/), [Amazon DynamoDB](https://aws.amazon.com/es/dynamodb/), [Amazon S3](https://aws.amazon.com/es/s3/), [Amazon CloudFront](https://aws.amazon.com/es/cloudfront/), and [Amazon Route53](https://aws.amazon.com/es/route53/). The application will allow users to create, read, update, and delete (CRUD) items from a DynamoDB table. What we want to accomplish at the end is to count the number of viewers our new website has and check if it works or not using a DynamoDB table.
+In this project, we will build a dynamic serverless web application integrating [AWS Lambda](https://aws.amazon.com/es/lambda/), [Amazon DynamoDB](https://aws.amazon.com/es/dynamodb/), [Amazon S3](https://aws.amazon.com/es/s3/), [Amazon CloudFront](https://aws.amazon.com/es/cloudfront/), and [Amazon Route53](https://aws.amazon.com/es/route53/). 
+
+The application will allow users to create, read, update, and delete (CRUD) items from a DynamoDB table. What we want to accomplish at the end is to count the number of viewers our new website has and check if it works or not using a DynamoDB table.
 
 ## Step by Step:
 
@@ -54,13 +56,12 @@ In this project, we will build a dynamic serverless web application integrating 
 
 ### 6° Phase - Create a Lambda function
 
-- Go to AWS Lambda and create a function.
-- I'll use the same name that we have been using (serverless-web-application-on-aws-project) and Pyhton 3.8 in my case, but you can use other languages.
+- Go to AWS Lambda and create an AWS Lambda function that will persist data to an Amazon DynamoDB table.
+- In my case, I'll use the same name that we have been using (serverless-web-application-on-aws-project) and Pyhton 3.8, but you can use other languages you feel comfortable with.
 - Within 'Advanced settings', allow 'Enable function URL' to assign HTTP(S) endpoints to your Lambda function.
 - For this case, we'll select NONE as auth type, but it's recommended to limit access through AWS_IAM (luckyly you can change it later if you want).
-- Since it possible to access it publicly, you should see the default Lamdbda message "Hello from Lambda!". When checking the function URL, you might encounter an error message like {"Message":"Forbidden"}, situation that happened to me. If that's your case, you probably fogot to change default execution role using the role that we have previously created. Just select the role when creating the Lambda function and the error will be solved. In my case, this worked.
+- Since it possible to access it publicly, you should see the default Lamdbda message _"Hello from Lambda!"_. When checking the function URL, you might encounter an error message like _{"Message":"Forbidden"}_, situation that happened to me. If that's your case, you probably fogot to change default execution role using the role that we have previously created. Just select the role when creating the Lambda function and the error will be solved. In my case, this worked.
 - Create the code (in my case with Python) to carry out the count of viewers of the website. In my case, the code goes as follows:
-
 
 `
     
@@ -87,54 +88,25 @@ In this project, we will build a dynamic serverless web application integrating 
     })
     
     return views`
-    
 
-### 7° Phase - Set up the Lambda function
+- You can split this Lambda function in two (one to GET the count and the other to UPDATE it), but I rather in this case to do everything in one.    
+- Now it's time to deploy our function and check if we have any errors. You can check it by clicking the Function URL and check if it's working as expected. If you refresh your website, you should see each time new number of views!
 
-- 
+<img width="973" alt="Screenshot 2023-10-30 at 16 06 46" src="https://github.com/jgalvalisi/AWS/assets/97465207/c0c3b43f-c7d6-4490-88b6-683595dc90c7">
+
+- You can check the number of views also using your DynamoDB table checking the items that it has.
+
+<img width="1154" alt="Screenshot 2023-10-30 at 16 57 11" src="https://github.com/jgalvalisi/AWS/assets/97465207/12b6018a-4f2b-433c-b753-4e5e890bd94b">
 
 
 ### 8° Phase - Delete the services (in case you need it)
 
 - In my case, I don't want to be charged for these services that I've created, so I'll proceed to delete everything with the aim of avoiding future charges.
-- 
+- If you are in the same situation as me, just delete your S3 Bucket, your DynamoDB table, IAM role, CloudFront, DNS you indicated, and any other related resource!
 
 
+## Summary:
 
+With this project, we created a serverless web application hosted on AWS, using AWS Lambda, DynamoDB, S3, CloudFront among other services.
 
-* Create a DynamoDB table to store the items.
-* Build a Lambda function to handle the CRUD operations on the DynamoDB table.
-* Use S3 to store and host the web application's static files within a bucket (HTML, CSS, and JavaScript).
-* Create a CloudFront distribution to serve the S3-hosted static files with low latency.
-
-
-
-
-## Expected Outcome:
-
-Upon completing the project, you will have a working serverless web application hosted on AWS.
-You will have hands-on experience building a serverless application using AWS Lambda, DynamoDB, S3, CloudFront.
-Additionally, you will have experience working with AWS services and integrating them to create a complete solution.
-
-This project will help you improve your skills in cloud computing, serverless architecture, and AWS services.
-
-
-
-
-
-
-
-
-
-CHEQUEAR ESTO 
-
-This workshop shows you how to build a dynamic, serverless web application. You'll learn how to host static web resources with Amazon S3, how to use Amazon Cognito to manage users and authentication, and how to build a RESTful API for backend processing using Amazon API Gateway, AWS Lambda and Amazon DynamoDB.
-
-In this project, we went through how to build a dynamic, serverless web application. In detail, we will host static web resources with Amazon S3, how to use Amazon Cognito to manage users and authentication, and how to build a RESTful API for backend processing using Amazon API Gateway, AWS Lambda and Amazon DynamoDB.
-
-
-
-
-create an AWS Lambda function that will persist data to an Amazon DynamoDB table.
-
-
+Additionally, we obtained experience working with AWS services and integrating them to create a complete solution focused on the use of Lambda.
