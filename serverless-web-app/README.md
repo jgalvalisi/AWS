@@ -62,7 +62,8 @@ In this project, we will build a dynamic serverless web application integrating 
 - Create the code (in my case with Python) to carry out the count of viewers of the website. In my case, the code goes as follows:
 
 
-`import json
+`
+import json
 import boto3
 
 dynamodb = boto3.resource('dynamodb')
@@ -82,7 +83,8 @@ def lambda_handler(event, context):
         'views': views
     })
     
-    return views`
+    return views
+`
     
 
 ### 7° Phase - Set up the Lambda function
