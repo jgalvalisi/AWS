@@ -61,8 +61,8 @@ In this project, we will build a dynamic serverless web application integrating 
 - Since it possible to access it publicly, you should see the default Lamdbda message "Hello from Lambda!". When checking the function URL, you might encounter an error message like {"Message":"Forbidden"}, situation that happened to me. If that's your case, you probably fogot to change default execution role using the role that we have previously created. Just select the role when creating the Lambda function and the error will be solved. In my case, this worked.
 - Create the code (in my case with Python) to carry out the count of viewers of the website. In my case, the code goes as follows:
 
-'''
-import json
+
+`import json
 import boto3
 
 dynamodb = boto3.resource('dynamodb')
@@ -82,9 +82,8 @@ def lambda_handler(event, context):
         'views': views
     })
     
-    return views
-'''
-
+    return views`
+    
 
 ### 7° Phase - Set up the Lambda function
 
