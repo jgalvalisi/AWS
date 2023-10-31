@@ -13,6 +13,7 @@ What we want to accomplish at the end is to count the number of viewers our new 
 
 - Using Amazon S3, we will host and compile all the files related to the website, such as HTML, CSS, or JavaScript formats.
 - Use the bucket name you like (I'll use serverless-web-application-on-aws-project.free.nf) and choose the region you need (in my case eu-central-1 Frankfurt).
+- Block the possibility of accessing the bucket publicly.
 - You can leave the rest as default settings.
 
 <img width="1274" alt="Screenshot 2023-10-26 at 19 06 11" src="https://github.com/jgalvalisi/AWS/assets/97465207/bb8944ee-4458-48bc-8a2e-a891e2c6fdc7">
@@ -24,15 +25,15 @@ What we want to accomplish at the end is to count the number of viewers our new 
 
 ### ❇️  2° Phase - Create the CloudFront distribution
 
-- To get low-latency of the website, we are going to settle CloudFront connected to our bucket.
+- To get low-latency of the website and to access our bucket files publicly (since it's blocked), we are going to settle CloudFront connected to our bucket.
 - Select our S3 bucket as the origin domain.
 - Select the option 'Origin access control settings (recommended)' since we did not make our S3 bucket public.
 - Set the Origin access control creating a new one.
 - Leave everything as default.
 - After this, we need to copy our S3 bucket policy in order to attach it to our bucket.
 - Under 'Origins,' select the origin name that we've created, click on 'Edit,' and copy the policy.
-- Now go to your S3 bucket and select 'Permissions'. We are going to add the policy to the bucket.
-- The last part of this is to select our index.html as the Default root object within the settings of the CloudFront distribution that we've created.
+- Now go to your S3 bucket and select 'Permissions'. We are going to add the CloudFront policy to the bucket.
+- The last part is to select our index.html as the 'Default root object' within the settings of the CloudFront distribution that we've created.
 
 
 ### ❇️  3° Phase - Route 53 in combination with CloudFront
